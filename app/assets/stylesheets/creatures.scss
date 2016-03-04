@@ -1,0 +1,21 @@
+// Place all the styles related to the creatures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#buttons {
+	display: inline-block;
+	list-style: none;
+}
+
+.main {
+	margin-top: 50px;
+}
+
+.action-buttons{
+	width: 70px;
+	display: inline-block;
+}
+
+.creature-list{
+	margin-top: 50px;
+}

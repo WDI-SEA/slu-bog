@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<%= render "creatures/nav" %>
+	<div class = 'container main'>
+		<div class = 'row'>
+			<div class = 'col-sm-12 text-center'>
+				<h1 class='text-center'>SLU Bog Creatures</h1>
+				<p class='btn btn-primary'><%= link_to "New Creature", new_creature_path %></p>
+			</div>
+		</div>
+
+			<div class='row container create'>
+			<% @creatures.each do |creature| %>
+				<div class='well col-sm-6 col-sm-offset-3'>
+					<h1><%= link_to creature.name, creature %></h1>
+					<p><%= creature.description %></p>
+					<ul id='buttons text-center'>
+						<li class='action-buttons btn btn-warning'><%= link_to "Delete", creature, method: :delete %></li>
+						<li class='action-buttons btn btn-warning'><%= link_to "Edit", edit_creature_path(creature) %></li> 
+					</ul>
+				</div>
+			<% end %>
+			<div class='row'>
+	</div>
+</body>
+</html>
+
