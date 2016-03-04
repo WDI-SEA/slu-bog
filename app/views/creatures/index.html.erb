@@ -1,0 +1,14 @@
+<!-- <h1>Creatures#index</h1>
+<p>Find me in app/views/creatures/index.html.erb</p> -->
+
+<h1>Creatures</h1>
+
+<%= link_to 'New Creature', new_creature_path %>
+
+<% @creatures.each do |creature|%>
+	<h2><%= link_to creature.name, creature %></h2>
+	<p><%= creature.description %></p>
+	<p><%= link_to 'Edit', edit_creature_path(creature)%></p>
+	<p><%= link_to 'Delete', creature, method: :delete %></p>
+
+<% end %>
