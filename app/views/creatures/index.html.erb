@@ -1,0 +1,10 @@
+<h1>Creatures in the South Lake Union Bog</h1>
+
+<%= link_to 'New Creature?', new_creature_path%>
+<% @creature.each do |creature|%>
+	<h2><%= link_to creature.name, creature%></h2>
+	<p><%= creature.description %></p>
+	<p><%= link_to 'Edit', edit_creature_path(creature[:id]) %> </p>
+	<p><%= link_to 'Delete', creature_path(creature), method: :delete%></p>
+
+<%end%>
