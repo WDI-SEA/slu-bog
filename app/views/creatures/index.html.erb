@@ -1,0 +1,13 @@
+<h1 id='creaturesHead'>All my Creatures!</h1>
+
+
+<% @creatures.each do |creature| %>
+<div>
+  <div id='creatureInfo' class="center-block">
+    <h2><%= link_to creature.name, creature %></h2>
+    <p class="lead"><%= creature.description %></p>
+    <p id='edit'><%= link_to 'Edit', edit_creature_path(creature) %></p>
+    <p id='delete'><%= link_to 'Delete', creature, :method => :delete %></p>
+  </div>
+<div>
+<% end %>
