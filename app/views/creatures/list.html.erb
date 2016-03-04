@@ -1,0 +1,17 @@
+<ul class="nav nav-tabs">
+    <li role="presentation"><a href="/creatures">Home</a></li>
+    <li role="presentation"><a href="/creatures/new">Add a Creature</a></li>
+    <li role="presentation" class="active"><a href="/creatures/list">List of creatures</a></li>
+</ul>
+
+
+<div class="center">
+    <h1>Creatures found so far</h1><br>
+    <% @creatures.each do |creature| %>
+            <h2><%= creature.name %></h2>
+            <div class="well"><p><%= creature.description %></p></div>
+
+            <%= link_to '<button type="button">Edit</button>'.html_safe, edit_creature_path(creature) %>
+            <%= link_to '<button type="button">Delete</button>'.html_safe, creature, method: :delete %>
+    <% end %>
+</div>

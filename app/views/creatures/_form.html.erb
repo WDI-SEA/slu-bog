@@ -1,0 +1,12 @@
+
+<div id="form">
+    <%= bootstrap_form_for @creature do |f| %>
+        <div id="name">
+            <%= f.text_field :name %>
+        </div>
+        <div id="description">
+            <%= f.text_area :description %>
+        </div>
+        <%= f.submit %>
+    <% end %>
+</div>

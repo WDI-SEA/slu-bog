@@ -1,0 +1,41 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require_bootstrap_form
+ */
+body {
+    
+    color: black;
+    background:url('http://pre10.deviantart.net/a8b1/th/pre/f/2012/158/e/4/wallpaper_troll_face_by_brunowalker-d52nuhb.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form {
+    
+    width: 30em;
+    position: center;
+}
+
+.well {
+    width: 40em;
+}
+
+.center {
+    width: 45em;
+    margin: 5em auto;
+    background-color: rgba(255,255,255,0.75);
+    border-radius: 5%;   
+    padding: 3em;
+}
