@@ -1,0 +1,14 @@
+<h1>Add new creature</h1>
+<%= form_for @creature do |c| %>
+	<div>
+		<%= c.label :name %>
+		<%= c.text_field :name %>
+	</div>
+
+	<div>
+		<%= c.label :description %>
+		<%= c.text_area :description %>
+	</div>
+
+	<%= c.submit %>
+<% end %>
