@@ -1,0 +1,23 @@
+
+
+<h1>Welcome to the Creature Feature         <button class="btn btn-info"><%= link_to 'Make a New Creature Here', new_creature_path %></button></h1>
+
+<% @creatures.each do |creature| %>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="https://placekitten.com/g/300/<%= creature.id+199%>" alt="...">
+      <div class="caption">
+        <h3><%= link_to creature.name, creature %></h3>
+        <p><%= creature.description %></p>     
+        		<button class="btn btn-info"><%= link_to 'Edit', edit_creature_path(creature) %></button>
+						<button class="btn btn-info"><%= link_to 'Delete', creature, method: :delete %></button>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+
+
+ 
