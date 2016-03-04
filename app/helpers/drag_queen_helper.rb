@@ -1,0 +1,2 @@
+module DragQueenHelper
+end

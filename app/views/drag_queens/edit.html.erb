@@ -1,0 +1,12 @@
+<h1>DragQueen#edit</h1>
+<p>Find me in app/views/drag_queen/edit.html.erb</p>
+
+<%= form_for @dragqueen do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.submit %>
+ <% end %>
