@@ -1,0 +1,11 @@
+<h1><strong><u><center>Create a new CREATURE!<center></u><strong></h1>
+
+<%= form_for @creature do |f| %>
+	<center><%= f.label :name %></center>
+	<center><%= f.text_field :name %></center>
+
+	<center><%= f.label :description %></center>
+	<center><%= f.text_area :description %></center>
+
+	<center><%= f.submit %></center>
+<% end %>
