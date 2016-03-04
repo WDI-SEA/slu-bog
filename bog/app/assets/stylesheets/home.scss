@@ -1,0 +1,17 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4d/EE-Lahemaa-Bagno_Viru.jpg');
+  background-size: cover;
+  background-repeat: none;
+}
+
+nav.navbar {
+  margin-bottom: 0;
+}
+
+#homePic {
+  background-color: rgba(0,0,0,0.5);
+}

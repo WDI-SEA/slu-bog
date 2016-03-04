@@ -1,0 +1,16 @@
+<h1>All Creature Sightings</h1>
+<p>A record of all reported sightings.</p>
+
+
+<% @creatures.each do |creature| %>
+ <div class='well'> 
+  <ul>
+    <li>
+      <h3><%= link_to creature.name, creature %></h3>
+      <p><%= creature.description %></p>
+      <p><%= link_to 'Edit', edit_creature_path(creature) %></p>
+      <p><%= link_to 'Delete', creature, method: :delete %></p>
+    </li>
+  </ul>
+</div>
+<% end %>

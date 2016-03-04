@@ -1,0 +1,9 @@
+<h1>Report a sighting</h1>
+<p>Enter the name and any details of the creature you saw below.</p>
+
+<%= bootstrap_form_for @creature do |c| %>
+  <%= c.text_area :name, label: "Creature Name" %>
+  <%= c.text_area :description, label: "Creature Description" %> 
+
+  <%= c.primary %>
+<% end %>
