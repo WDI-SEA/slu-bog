@@ -1,0 +1,6 @@
+<ul>
+<li><%= @creatures.name %></li>
+<%= @creatures.description %>
+<p> <%= link_to 'Delete', @creatures, :method => :delete %> </p>
+<p> <%= link_to 'Edit', edit_creature_path(@creatures.id) %> </p>
+</ul>

@@ -1,0 +1,10 @@
+<%= form_for @creatures do |c| %>
+<%= c.label :name %>
+<%= c.text_field :name %>
+
+<%= c.label :description %>
+<%= c.text_area :description %>
+
+<%=c.submit %>
+
+<% end %>
