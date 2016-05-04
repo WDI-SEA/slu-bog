@@ -1,0 +1,18 @@
+<%= form_for @creature do |c| %>
+  <div>
+    <%= c.label :name %>
+    <%= c.text_area :name  %>
+  </div>
+
+  <div>
+    <%= c.label :desciption %>
+    <%= c.text_area :desciption  %>
+  </div>
+
+  <div>
+    <%= c.label :location %>
+    <%= c.text_area :location  %>
+  </div>
+
+  <%= c.submit  %>
+<% end %> 
