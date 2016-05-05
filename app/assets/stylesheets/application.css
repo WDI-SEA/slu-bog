@@ -12,40 +12,82 @@
  *
  *= require_tree .
  *= require_self
- *= require rails_bootstrap_forms
  */
 
-header[role="banner"] {
-  #logo-main {
-    display: block;
-    margin: 20px auto;
 
-  }
-}
-
-#navbar-primary.navbar-default {
-  background: transparent;
-  border: none;
-  .navbar-nav { 
-    width: 100%;
-    text-align: center;
-    > li {
-      display: inline-block;
-      float: none;
-      > a {
-        padding-left: 30px;
-        padding-right: 30px;
-        font-size: 32px;
-      }
+#navbar-primary .navbar-nav { 
+//  background: #ededed;
+  width: 100%;
+  text-align: center;
+  > li {
+    display: inline-block;
+    float: none;
+    > a {
+      padding-left: 30px;
+      padding-right: 30px;
     }
   }
 }
 
-#navbar-header{
-  text-align: center;
+.top {
+  font-family: 'Open Sans Condensed Bold', sans-serif;
+  font-size: 40px;
 }
 
-body {
-  background-color: black;
+a {
+  color: darkgreen;
+}
+
+.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}
+
+// non-related styling:
+body{
+  background: #333;
+  color: #ddd;
+}
+h1{
   color: white;
+  font-size: 2.25em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+}
+
+#center {
+  width: 90%;
+  text-align: center;
 }

@@ -43,11 +43,17 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  #add Bootstrap Form for styling
+  gem 'bootstrap_form', github: 'bootstrap-ruby/rails-bootstrap-forms'
+
+  #paperclip for beautiful pictures
+  gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
+  #google webfonts
+  gem 'google-webfonts', '~> 0.2.0'
 end
 
-#add Bootstrap for styling
-# gem 'bootstrap_form'
 
-#add bootstrap-form for prettiness
-#gem 'bootstrap_form'
+
 

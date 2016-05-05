@@ -1,20 +1,21 @@
-<h1>Update our creature database</h1>
+<h1>Add Creature to Database</h1>
 
-<%= form_for @creature do |c| %>
-  <div>
-    <%= c.label :name %>
-    <%= c.text_field :name  %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= bootstrap_form_for @creature do |c| %>
+      <div>
+        <%= c.text_field :name  %>
+      </div>
+
+      <div>
+        <%= c.text_area :desciption  %>
+      </div>
+
+      <div>
+        <%= c.text_field :location  %>
+      </div>
+
+      <%= c.submit "Add Creature", class: "btn btn-default" %>
+    <% end %> 
   </div>
-
-  <div>
-    <%= c.label :desciption %>
-    <%= c.text_area :desciption  %>
-  </div>
-
-  <div>
-    <%= c.label :location %>
-    <%= c.text_field :location  %>
-  </div>
-
-  <%= c.submit  %>
-<% end %> 
+</div>
