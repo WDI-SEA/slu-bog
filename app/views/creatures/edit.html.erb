@@ -1,0 +1,26 @@
+
+<div class="col-md-offset-2 col-md-10">
+  <h1>Edit Your Findings!</h1>
+</div>
+
+<div class="col-md-offset-2 col-md-10">
+  <%= form_for @creature do |c| %>
+    
+    <div>
+      <%= c.label :species %>
+      <%= c.text_field :species %>
+    </div>
+
+    <div>
+      <%= c.label :location %>
+      <%= c.text_area :location %>
+    </div>
+
+    <div>
+      <%= c.label :description %>
+      <%= c.text_area :description %>
+    </div>
+    <%= c.submit %>
+    
+  <% end %>
+</div>

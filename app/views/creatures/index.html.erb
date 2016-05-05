@@ -1,0 +1,16 @@
+<div class="col-md-offset-2 col-md-10">
+  <h1>Logged Creatures</h1>
+</div>
+
+<div class="col-md-offset-2 col-md-10">
+  
+  <% @creatures.each do |creature| %>
+    <div>
+      <h4><%= creature.species %></h4>
+      <p><%= creature.location %></p>
+      <p><%= creature.description %></p>
+      <button><%= link_to "Edit", edit_creature_path(creature) %></button>
+      <button><%= link_to "Delete", creature, method: :delete %></button>
+    </div>
+  <% end %>
+</div>
