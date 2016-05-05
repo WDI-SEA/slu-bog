@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <h1>All Creatures</h1> <%= link_to "New", new_creature_path, class: "btn btn-primary" %>
+</div>
+
+<div class="container-fluid">
+  <% @creatures.each do |creature| %>
+    
+    <div class="well">
+      <p><span style="font-weight: bold">
+      <a href="/creatures/<%= creature.id %>">  <%= creature.name %> </a>
+      </span> <%= creature.description %></p>
+
+      <%= button_to "Delete Creature", { action: "destroy", id: creature.id }, method: :delete, class: "btn btn-danger" %>
+    </div>
+    
+  <% end %>
+
+</div>

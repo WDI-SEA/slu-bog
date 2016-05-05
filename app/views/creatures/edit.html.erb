@@ -1,0 +1,17 @@
+
+<div class="container-fluid">
+  <h1>Edit <%= @creature.name %></h1>
+
+  <%= bootstrap_form_for @creature do |c| %>
+    <div>
+      <%= c.text_field :name %>
+    </div>
+
+    <div>
+      <%= c.text_area :description %>
+    </div>
+
+    <%= c.submit %>
+  <% end %>
+
+</div>
