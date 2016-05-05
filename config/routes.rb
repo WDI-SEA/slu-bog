@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
 
-  root 'creatures#index'
+  root 'creatures#home'
 
-  get 'creatures/about'
+  # get 'creatures/about'
 
-  get 'creatures/create'
+  # get 'creatures/create'
 
-  get 'creatures/new'
+  # get 'new' => 'creatures#new'
 
-  get 'creatures/edit'
+  # get 'edit' => 'creatures#edit'
 
-  get 'creatures/show'
+  # get 'creatures/show'
 
-  get 'creatures/update'
+  # get 'creatures/update'
 
-  get 'creatures/destroy'
+  # get 'creatures/destroy'
 
   resources :creatures
 

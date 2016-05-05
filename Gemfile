@@ -45,3 +45,9 @@ group :development do
   gem 'spring'
 end
 
+#add Bootstrap for styling
+# gem 'bootstrap_form'
+
+#add bootstrap-form for prettiness
+#gem 'bootstrap_form'
+

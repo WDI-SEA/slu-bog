@@ -12,4 +12,40 @@
  *
  *= require_tree .
  *= require_self
+ *= require rails_bootstrap_forms
  */
+
+header[role="banner"] {
+  #logo-main {
+    display: block;
+    margin: 20px auto;
+
+  }
+}
+
+#navbar-primary.navbar-default {
+  background: transparent;
+  border: none;
+  .navbar-nav { 
+    width: 100%;
+    text-align: center;
+    > li {
+      display: inline-block;
+      float: none;
+      > a {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+#navbar-header{
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  color: white;
+}

@@ -1,7 +1,9 @@
+<h1>Update our creature database</h1>
+
 <%= form_for @creature do |c| %>
   <div>
     <%= c.label :name %>
-    <%= c.text_area :name  %>
+    <%= c.text_field :name  %>
   </div>
 
   <div>
@@ -11,7 +13,7 @@
 
   <div>
     <%= c.label :location %>
-    <%= c.text_area :location  %>
+    <%= c.text_field :location  %>
   </div>
 
   <%= c.submit  %>
