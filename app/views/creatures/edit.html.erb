@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <h1 class="center-text">Edit a Creature Sighting</h1>
+  </div>
+</div>
+<div class="row">
+<div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+<%= bootstrap_form_for @creature do |t| %>
+  
+<div>
+    <%= t.text_field :name %>
+ </div>
+
+ <div>
+    <%= t.text_area :description %>
+</div>
+  <%= t.submit %>
+<% end %>
+</div>
+</div>

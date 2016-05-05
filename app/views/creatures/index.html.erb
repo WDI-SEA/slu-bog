@@ -1,0 +1,35 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <h1 class="center-text">The SLU Creatures</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="center" style="width: 186px;">
+    <a href="/creatures/new" class="center">Add a New Creature Sighting!</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <table class="table table-striped itin-delete-table" style="margin-top: 40px">
+      <tbody>
+        <% @creatures.each do |creature| %>
+        <tr>
+          <td> 
+           <h5><%= creature.name %></h5>
+          </td>
+          <td>
+        
+            <p><%= truncate creature.description, length: 140 %>  <%= link_to 'read more', creature %> </p>
+          </td>
+          <td style="text-align: right;">
+            <%= link_to '<button type="button">Edit</button>'.html_safe, edit_creature_path(creature) %>
+          <%= link_to '<button type="button">Delete</button>'.html_safe, creature, method: :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+    </table>
+  </div>
+</div>
+</div>
