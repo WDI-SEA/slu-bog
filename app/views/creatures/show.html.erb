@@ -1,0 +1,24 @@
+<h1>Creature Details</h1>
+
+<div class="container">
+	<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title"><%= @creature.name %></h3>
+			  </div>
+			  <div class="panel-body">
+			  	<p><%= @creature.description %></p>
+			  	<ul>
+			  	<% for tag in @creature.tags %>
+			  	<li><%= tag.name %></li>
+			  	<% end %>
+					</ul>
+					<div class="buttons">
+						<%= link_to "Edit Creature", edit_creature_path(@creature.id), class: 'btn btn-default' %>
+						<%= link_to "Delete Creature", creature_path(@creature.id), :method => :delete , class: 'btn btn-default' %>
+						<a href="/creatures"><button class="btn btn-default">Go Back</button></a>
+					</div>
+			  </div>
+			</div>
+	</div>
+</div>

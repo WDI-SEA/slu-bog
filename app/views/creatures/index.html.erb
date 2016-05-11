@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="col-md-6 col-md-offset-3">
+		<h1>Creatures</h1>
+		<% @creatures.each do |creature| %>
+			<div class="panel panel-info">
+			  <div class="panel-body">
+					<h3><a href="/creatures/<%= creature.id %>"><%= creature.name %></a></h3> 
+			  </div>
+			</div>		
+		<% end %>
+	</div>
+</div>

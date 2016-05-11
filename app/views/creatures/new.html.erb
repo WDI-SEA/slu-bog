@@ -1,0 +1,29 @@
+<h1>Add A Creature</h1>
+
+<div class="container">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for @creature do |c| %>
+			
+			<div class="name-edit">
+				<%= c.label :name %><br>
+				<%= c.text_field :name %>
+			</div>	
+
+			<div class="descrip-edit">
+				<%= c.label :description %><br>
+				<%= c.text_area :description %>
+			</div>
+
+			<div class="descrip-edit">
+			<%= c.collection_check_boxes :tag, @tags, :id, :name %>
+			</div>
+			
+			<div class="submit">
+			<%= c.submit %>
+			</div>
+		<% end %>
+
+	</div>
+</div>
+
+
