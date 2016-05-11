@@ -1,0 +1,17 @@
+<h1>Creature Creator</h1>
+<!-- <p>Find me in app/views/creatures/new.html.erb</p>
+ -->
+
+<%= form_for @creature do |f| %>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	
+	<div>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</div>
+		<%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
+	<%= f.submit %>
+<% end %>

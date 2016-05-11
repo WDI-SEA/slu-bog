@@ -1,0 +1,18 @@
+<section id="content-section" class="container">
+	<% @creatures.each do |creature| %>
+<div class="creature">
+	<h2><%= creature.name %></h2>
+	<p><%= creature.description %></p>
+
+	<ul>
+	<% for tag in creature.tags %>
+		<li class = 'tagpath'> <%= link_to tag.name, tag_path(tag) %>
+</li>
+	<% end %>
+	</ul>
+
+   <%= link_to 'Edit', edit_creature_path(creature) %>
+	<%= link_to 'Delete', creature, method: :delete %>
+</div>
+<% end %>
+</section>

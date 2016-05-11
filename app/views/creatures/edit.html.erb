@@ -1,0 +1,16 @@
+<h1>Creature Edit</h1>
+<!-- <p>Find me in app/views/creatures/edit.html.erb</p>
+ -->
+<%= bootstrap_form_for(@creature)  do |f| %>
+	<div>
+		<%= f.text_field :name %>
+	</div>
+	
+	<div>
+		<%= f.text_area :description %>
+	</div>
+
+	<%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
+
+	<%= f.submit %>
+<% end %>
