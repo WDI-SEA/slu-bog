@@ -1,0 +1,19 @@
+<h1>Creatures#new</h1>
+<p>Find me in app/views/creatures/new.html.erb</p>
+
+<%= form_for @creature do |t| %>
+
+  <div>
+    <%= t.label :name %>
+    <%= t.text_field :name %>
+  </div>
+  <div>
+    <%= t.label :description %>
+    <%= t.text_area :description %>
+  </div>
+  <div>
+  <%= c.collection_check_boxes :tag_ids, @tags, :id, :name  %>
+  </div>
+
+  <%= t.submit %>
+<% end %>
