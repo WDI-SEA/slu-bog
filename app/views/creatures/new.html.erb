@@ -1,0 +1,20 @@
+<h1> Submit New Creature Finding</h1>
+<!-- <h1>Creatures#new</h1> -->
+<!-- <p>Find me in app/views/creatures/new.html.erb</p> -->
+
+<%= bootstrap_form_for @creature do |c| %>
+
+ <div>
+      <%= c.text_field :name %>
+    </div>
+
+    <div>
+      <%= c.text_area :description %>
+    </div>
+    <div>
+       <%=c.collection_check_boxes :tag_ids, @tags, :id, :name %>
+    </div>
+    <%= c.submit %>
+
+
+<% end %>

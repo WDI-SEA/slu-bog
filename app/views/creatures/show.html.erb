@@ -1,0 +1,23 @@
+<br>
+<br>
+<h1>Creatures</h1>
+
+<%= bootstrap_form_for @creature do |c| %>
+
+ <div>
+      <%= c.text_field :name %>
+    </div>
+
+    <div>
+      <%= c.text_area :description %>
+    </div>
+    <div>
+       <%=c.collection_check_boxes :tag_ids, @tags, :id, :name %>
+    </div>
+    <%= c.submit %>
+
+
+<% end %>
+<h3><%= @creature.name %></h3>
+<ul>
+<li><%= @creature.description %></u1></li>

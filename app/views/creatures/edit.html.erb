@@ -1,0 +1,11 @@
+
+<div class="col-md-6-offset-2 ">
+  <h1>Edit Your Findings!<%= @creature.name  %></h1>
+  <%=bootstrap_form_for(@creature) do |c| %>
+      <%= c.text_field :name %>
+      <%= c.text_area :description %>
+    <%=c.collection_check_boxes :tag_ids, @tags, :id, :name %>
+    <%= c.submit %>
+    </div>
+    
+  <% end %>

@@ -1,0 +1,7 @@
+<h1>Creatures with <%=@tag.name %>Tag</h1>
+
+<% for creature in @creatures  %>
+<p>
+  <%=link_to creature.name, creature_path(creature) %>
+  </p>
+  <% end %>

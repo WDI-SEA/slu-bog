@@ -1,0 +1,24 @@
+<h1>Creatures</h1>
+<!-- <p>Find me in app/views/creatures/index.html.erb</p> -->
+
+<section id="content_section">
+  <% @creatures.each do |creature| %>
+    <h2><a href="/api/creatures/<%= creature[:id] %>" class="show-link"><%= creature[:name] %></a></h2>
+    <h4><%= creature[:desciption] %></h4>
+    <h4><%= creature[:location] %></h4>
+  <% end %>
+</section>
+         <%= bootstrap_form_for @creature do |c| %>
+        <div>
+          <%= c.text_field :name  %>
+        </div>
+
+        <div>
+          <%= c.text_area :desciption  %>
+        </div>
+
+        <div>
+          <%= c.text_field :location  %>
+         </div>
+      <% end %> 
+    
