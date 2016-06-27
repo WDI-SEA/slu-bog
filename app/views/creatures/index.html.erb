@@ -1,0 +1,21 @@
+<nav>
+  <ul>
+    <a href="/creatures"><li>Creatures</li></a>
+    <a href="/"><li>Home</li></a>
+  </ul>
+</nav>
+<h1>Creatures</h1>
+<p>Find me in app/views/creatures/index.html.erb</p>
+<% @creatures.each do |creature|%>
+
+    <button><%=link_to'Edit',edit_creature_path(creature) %></button>
+    <button><%=link_to'delete',creature, method: :delete %></button>
+    <p>Creature: <%= creature.creature %></p>
+    <p>Submitted By: <%= creature.username%></p>
+
+<% end %>
+<ul>
+<% for tag in creature.tags %>
+  <li> <%=tag.name  %> </li>
+<% end %>
+</ul>

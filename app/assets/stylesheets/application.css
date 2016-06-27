@@ -1,0 +1,53 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import url(https://fonts.googleapis.com/css?family=Work+Sans:900);
+
+body {
+  background-image: url("https://unsplash.com/photos/b5POxb2aL9o");
+
+}
+
+ nav{
+  background: black;
+  color:white;
+  padding:20px;
+  margin: -20px 50px 0px 50px;
+  padding: -20px;
+ }
+ li {
+  list-style: none;
+  text-decoration: none;
+ }
+
+a {
+  color: blue;
+  text-decoration: none;
+  float: right;
+}
+
+.index-h1{
+  text-align: center;
+  font-size: 120px;
+  font-family: Work Sans;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: work sans
+}
+

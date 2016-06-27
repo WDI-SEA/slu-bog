@@ -1,0 +1,11 @@
+<%= form_for @creature do |creature|%>
+  <div>
+    <%= creature.label :creature %>
+    <%= creature.text_area :creature %>
+  </div>
+  <div>
+    <%= creature.label :username %>
+    <%= creature.text_area :username %>
+  </div>
+  <%=creature.submit%>
+<% end %>
