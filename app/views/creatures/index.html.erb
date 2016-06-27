@@ -1,0 +1,29 @@
+<h1>Creatures</h1>
+
+<%= link_to "see all tags", tags_path  %>
+<% if @creatures.length == 0  %>
+  <p>no one has added a creature yet.</p>
+  <p><a href="/creatures/new">add</a> a creature!</p>
+<% elsif @creatures %>
+  <p><a href="/creatures/new">add</a> a creature!</p>
+<% end %>
+
+<% @creatures.each do |creature| %>
+  <div>
+  <h2><%= creature.name %></h2>
+  <h5><%= creature.description %></h5>
+
+
+<ul>
+  <% for tag in creature.tags  %>
+    <li><%= tag.name  %></li>
+<% end  %>
+</ul>
+
+
+
+<p><a href="<%= edit_creature_path(creature) %>"></a></p>
+
+<%= link_to 'Destroy', creature_path(creature), method: :delete  %>
+</div>
+<% end %>

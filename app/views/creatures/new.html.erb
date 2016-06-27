@@ -1,0 +1,10 @@
+<h1>Create your own creature!</h1>
+<p></p>
+
+
+<%= bootstrap_form_for(@creature) do |c| %>
+  <%= c.text_field :name %>
+  <%= c.text_area :description %>
+  <%= c.collection_check_boxes :tag_ids, @tags, :id, :name  %>
+  <%= c.submit "Create new!" %>
+<% end %>
