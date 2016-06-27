@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Update creature info here:</h1>
+    </div>
+    <div class"row">
+      <div class="col-md-8">
+        <%= bootstrap_form_for @creature do |f| %>
+        <%= f.text_field :name %>
+        <%= f.text_field :description %>
+        <%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
+
+        <%= f.submit "Save" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

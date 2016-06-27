@@ -1,0 +1,7 @@
+<h1>Tags#show</h1>
+<p>creatures with <%= @tag.name%> Tag</p>
+
+
+<% for creature in @creatures %>
+<%= link_to creature.name, creature_path(creature)  %>
+<%end %>
